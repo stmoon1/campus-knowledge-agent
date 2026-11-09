@@ -1,0 +1,61 @@
+{
+  "mode": "mock",
+  "model": null,
+  "status": "answered",
+  "answer": "访客到访前由邀请人在访客系统完成登记。",
+  "citations": [
+    {
+      "id": "D05",
+      "date": "2026-08-01",
+      "quote": "访客到访前由邀请人在访客系统完成登记。"
+    }
+  ],
+  "gaps": [],
+  "reason": null,
+  "trace": [
+    {
+      "step": 1,
+      "action": "search",
+      "args": {
+        "query": "访客来访之前需要怎么登记？"
+      },
+      "reason": "从问题和必要上下文提取主题",
+      "nextAction": "read",
+      "result": {
+        "ok": true,
+        "hits": [
+          {
+            "id": "D05",
+            "date": "2026-08-01",
+            "topic": "访客登记"
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": "read",
+      "args": {
+        "id": "D05"
+      },
+      "reason": "读取同主题版本原文",
+      "nextAction": "answer",
+      "result": {
+        "ok": true,
+        "id": "D05",
+        "topic": "访客登记",
+        "snippet": "访客到访前由邀请人在访客系统完成登记。"
+      }
+    },
+    {
+      "step": 3,
+      "action": "answer",
+      "args": {
+        "topic": "访客登记"
+      },
+      "reason": "同主题证据一致",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 51
+}

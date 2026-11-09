@@ -1,0 +1,36 @@
+{
+  "mode": "ollama",
+  "model": "qwen3:8b",
+  "status": "incomplete",
+  "answer": null,
+  "citations": [],
+  "gaps": [
+    "需要进一步确认公司是否有宠物保险补贴政策，建议提供更具体的检索词或查阅公司内部政策文件。"
+  ],
+  "reason": "needs_information",
+  "trace": [
+    {
+      "step": 1,
+      "action": "search",
+      "args": {
+        "query": "公司是否补贴宠物保险"
+      },
+      "reason": "依据当前问题，需要检索公司是否有相关政策或福利。",
+      "nextAction": "clarify",
+      "result": {
+        "ok": true,
+        "hits": []
+      }
+    },
+    {
+      "step": 2,
+      "action": "clarify",
+      "args": {
+        "message": "需要进一步确认公司是否有宠物保险补贴政策，建议提供更具体的检索词或查阅公司内部政策文件。"
+      },
+      "reason": "依据当前搜索结果为空，需进一步澄清或获取更多信息。",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 1787
+}

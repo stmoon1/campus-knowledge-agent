@@ -1,0 +1,88 @@
+{
+  "mode": "mock",
+  "model": null,
+  "status": "needs_confirmation",
+  "answer": null,
+  "citations": [
+    {
+      "id": "D01",
+      "date": "2026-08-01",
+      "quote": "差旅结束后 30 个自然日内提交报销申请。"
+    },
+    {
+      "id": "D02",
+      "date": "2026-09-12",
+      "quote": "差旅结束后 15 个自然日内提交报销申请。"
+    }
+  ],
+  "reason": "conflicting_sources",
+  "gaps": [
+    "请确认适用制度的范围或优先级。"
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "action": "search",
+      "args": {
+        "query": "差旅报销期限是多少天？"
+      },
+      "reason": "从问题和必要上下文提取主题",
+      "nextAction": "read",
+      "result": {
+        "ok": true,
+        "hits": [
+          {
+            "id": "D01",
+            "date": "2026-08-01",
+            "topic": "差旅报销期限"
+          },
+          {
+            "id": "D02",
+            "date": "2026-09-12",
+            "topic": "差旅报销期限"
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": "read",
+      "args": {
+        "id": "D01"
+      },
+      "reason": "读取同主题版本原文",
+      "nextAction": "read",
+      "result": {
+        "ok": true,
+        "id": "D01",
+        "topic": "差旅报销期限",
+        "snippet": "差旅结束后 30 个自然日内提交报销申请。"
+      }
+    },
+    {
+      "step": 3,
+      "action": "read",
+      "args": {
+        "id": "D02"
+      },
+      "reason": "读取同主题版本原文",
+      "nextAction": "conflict",
+      "result": {
+        "ok": true,
+        "id": "D02",
+        "topic": "差旅报销期限",
+        "snippet": "差旅结束后 15 个自然日内提交报销申请。"
+      }
+    },
+    {
+      "step": 4,
+      "action": "conflict",
+      "args": {
+        "topic": "差旅报销期限"
+      },
+      "reason": "同主题原文不一致",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 51
+}

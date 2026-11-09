@@ -1,0 +1,23 @@
+{
+  "mode": "ollama",
+  "model": "qwen3:8b",
+  "status": "incomplete",
+  "answer": null,
+  "citations": [],
+  "gaps": [
+    "需要明确'找谁批'具体指的是哪个流程或制度中的审批环节。"
+  ],
+  "reason": "needs_information",
+  "trace": [
+    {
+      "step": 1,
+      "action": "clarify",
+      "args": {
+        "message": "需要明确'找谁批'具体指的是哪个流程或制度中的审批环节。"
+      },
+      "reason": "依据",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 718
+}

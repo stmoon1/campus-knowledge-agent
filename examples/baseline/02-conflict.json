@@ -1,0 +1,62 @@
+{
+  "mode": "ollama",
+  "model": "qwen3:8b",
+  "status": "incomplete",
+  "answer": null,
+  "citations": [],
+  "gaps": [
+    "缺少该主题的已核对原文。"
+  ],
+  "reason": "unverified_sources",
+  "trace": [
+    {
+      "step": 1,
+      "action": "search",
+      "args": {
+        "query": "差旅报销期限"
+      },
+      "reason": "根据问题内容，需要查找差旅报销的期限规定。",
+      "nextAction": "read",
+      "result": {
+        "ok": true,
+        "hits": [
+          {
+            "id": "D01",
+            "date": "2026-08-01",
+            "topic": "差旅报销期限"
+          },
+          {
+            "id": "D02",
+            "date": "2026-09-12",
+            "topic": "差旅报销期限"
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": "read",
+      "args": {
+        "id": "D01"
+      },
+      "reason": "根据检索结果，需要读取关于差旅报销期限的文档D01以获取详细信息。",
+      "nextAction": "answer",
+      "result": {
+        "ok": true,
+        "id": "D01",
+        "topic": "差旅报销期限",
+        "snippet": "差旅结束后 30 个自然日内提交报销申请。"
+      }
+    },
+    {
+      "step": 3,
+      "action": "answer",
+      "args": {
+        "topic": "差旅报销期限"
+      },
+      "reason": "根据文档D01的内容，差旅报销期限为差旅结束后30个自然日内提交报销申请。",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 2326
+}

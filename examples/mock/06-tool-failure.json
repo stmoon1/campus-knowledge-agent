@@ -1,0 +1,55 @@
+{
+  "mode": "mock",
+  "model": null,
+  "status": "incomplete",
+  "answer": null,
+  "citations": [],
+  "gaps": [
+    "工具调用失败，无法核对原文。"
+  ],
+  "reason": "model_stopped",
+  "trace": [
+    {
+      "step": 1,
+      "action": "search",
+      "args": {
+        "query": "访客来访之前需要怎么登记？"
+      },
+      "reason": "从问题和必要上下文提取主题",
+      "nextAction": "read",
+      "result": {
+        "ok": true,
+        "hits": [
+          {
+            "id": "D05",
+            "date": "2026-08-01",
+            "topic": "访客登记"
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": "read",
+      "args": {
+        "id": "D05"
+      },
+      "reason": "读取同主题版本原文",
+      "nextAction": "stop",
+      "result": {
+        "ok": false,
+        "error": "模拟工具故障"
+      }
+    },
+    {
+      "step": 3,
+      "action": "stop",
+      "args": {
+        "message": "工具调用失败，无法核对原文。"
+      },
+      "reason": "工具未返回可验证证据",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 48
+}

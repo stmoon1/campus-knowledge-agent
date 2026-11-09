@@ -1,0 +1,13 @@
+{
+  "question": "那找谁批？",
+  "history": [
+    {
+      "role": "user",
+      "content": "年假要提前多久申请？"
+    },
+    {
+      "role": "assistant",
+      "content": "年假至少提前3个工作日申请。"
+    }
+  ]
+}

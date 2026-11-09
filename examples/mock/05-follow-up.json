@@ -1,0 +1,66 @@
+{
+  "mode": "mock",
+  "model": null,
+  "status": "answered",
+  "answer": "年假由申请人的直属主管审批。",
+  "citations": [
+    {
+      "id": "D04",
+      "date": "2026-09-01",
+      "quote": "年假由申请人的直属主管审批。"
+    }
+  ],
+  "gaps": [],
+  "reason": null,
+  "trace": [
+    {
+      "step": 1,
+      "action": "search",
+      "args": {
+        "query": "年假至少提前3个工作日申请。 那找谁批？"
+      },
+      "reason": "从问题和必要上下文提取主题",
+      "nextAction": "read",
+      "result": {
+        "ok": true,
+        "hits": [
+          {
+            "id": "D03",
+            "date": "2026-08-15",
+            "topic": "年假申请时间"
+          },
+          {
+            "id": "D04",
+            "date": "2026-09-01",
+            "topic": "年假申请审批"
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": "read",
+      "args": {
+        "id": "D04"
+      },
+      "reason": "读取同主题版本原文",
+      "nextAction": "answer",
+      "result": {
+        "ok": true,
+        "id": "D04",
+        "topic": "年假申请审批",
+        "snippet": "年假由申请人的直属主管审批。"
+      }
+    },
+    {
+      "step": 3,
+      "action": "answer",
+      "args": {
+        "topic": "年假申请审批"
+      },
+      "reason": "同主题证据一致",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 48
+}

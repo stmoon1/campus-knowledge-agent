@@ -1,0 +1,14 @@
+{
+  "name": "campus-knowledge-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/cli.js",
+    "test": "node --test",
+    "examples": "node --env-file-if-exists=.env scripts/capture.js"
+  }
+}

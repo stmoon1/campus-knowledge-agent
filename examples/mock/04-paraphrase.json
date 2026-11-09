@@ -1,0 +1,66 @@
+{
+  "mode": "mock",
+  "model": null,
+  "status": "answered",
+  "answer": "年假申请须至少提前 3 个工作日提交。",
+  "citations": [
+    {
+      "id": "D03",
+      "date": "2026-08-15",
+      "quote": "年假申请须至少提前 3 个工作日提交。"
+    }
+  ],
+  "gaps": [],
+  "reason": null,
+  "trace": [
+    {
+      "step": 1,
+      "action": "search",
+      "args": {
+        "query": "我打算休假，年假请假要提早几天说？"
+      },
+      "reason": "从问题和必要上下文提取主题",
+      "nextAction": "read",
+      "result": {
+        "ok": true,
+        "hits": [
+          {
+            "id": "D03",
+            "date": "2026-08-15",
+            "topic": "年假申请时间"
+          },
+          {
+            "id": "D04",
+            "date": "2026-09-01",
+            "topic": "年假申请审批"
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": "read",
+      "args": {
+        "id": "D03"
+      },
+      "reason": "读取同主题版本原文",
+      "nextAction": "answer",
+      "result": {
+        "ok": true,
+        "id": "D03",
+        "topic": "年假申请时间",
+        "snippet": "年假申请须至少提前 3 个工作日提交。"
+      }
+    },
+    {
+      "step": 3,
+      "action": "answer",
+      "args": {
+        "topic": "年假申请时间"
+      },
+      "reason": "同主题证据一致",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 48
+}

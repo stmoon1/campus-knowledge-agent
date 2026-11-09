@@ -1,0 +1,81 @@
+{
+  "mode": "ollama",
+  "model": "qwen3:8b",
+  "status": "answered",
+  "answer": "年假由申请人的直属主管审批。",
+  "citations": [
+    {
+      "id": "D04",
+      "date": "2026-09-01",
+      "quote": "年假由申请人的直属主管审批。"
+    }
+  ],
+  "gaps": [],
+  "reason": null,
+  "trace": [
+    {
+      "step": 1,
+      "action": "search",
+      "args": {
+        "query": "年假 审批"
+      },
+      "reason": "依据用户历史问题和当前问题，需查找年假申请的审批流程和责任人。",
+      "nextAction": "read",
+      "result": {
+        "ok": true,
+        "hits": [
+          {
+            "id": "D03",
+            "date": "2026-08-15",
+            "topic": "年假申请时间"
+          },
+          {
+            "id": "D04",
+            "date": "2026-09-01",
+            "topic": "年假申请审批"
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "action": "read",
+      "args": {
+        "id": "D03"
+      },
+      "reason": "依据用户历史问题和当前问题，需查找年假申请的审批流程和责任人。",
+      "nextAction": "read",
+      "result": {
+        "ok": true,
+        "id": "D03",
+        "topic": "年假申请时间",
+        "snippet": "年假申请须至少提前 3 个工作日提交。"
+      }
+    },
+    {
+      "step": 3,
+      "action": "read",
+      "args": {
+        "id": "D04"
+      },
+      "reason": "依据用户历史问题和当前问题，需查找年假申请的审批流程和责任人。",
+      "nextAction": "answer",
+      "result": {
+        "ok": true,
+        "id": "D04",
+        "topic": "年假申请审批",
+        "snippet": "年假由申请人的直属主管审批。"
+      }
+    },
+    {
+      "step": 4,
+      "action": "answer",
+      "args": {
+        "topic": "年假申请审批"
+      },
+      "reason": "依据用户历史问题和当前问题，已读取年假申请的审批流程和责任人。",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 3115
+}

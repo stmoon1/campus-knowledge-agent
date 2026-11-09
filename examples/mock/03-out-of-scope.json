@@ -1,0 +1,36 @@
+{
+  "mode": "mock",
+  "model": null,
+  "status": "incomplete",
+  "answer": null,
+  "citations": [],
+  "gaps": [
+    "资料库没有相关制度，请提供适用的制度文件或具体主题。"
+  ],
+  "reason": "needs_information",
+  "trace": [
+    {
+      "step": 1,
+      "action": "search",
+      "args": {
+        "query": "公司是否补贴宠物保险？"
+      },
+      "reason": "从问题和必要上下文提取主题",
+      "nextAction": "clarify",
+      "result": {
+        "ok": true,
+        "hits": []
+      }
+    },
+    {
+      "step": 2,
+      "action": "clarify",
+      "args": {
+        "message": "资料库没有相关制度，请提供适用的制度文件或具体主题。"
+      },
+      "reason": "检索无结果",
+      "nextAction": "end"
+    }
+  ],
+  "elapsedMs": 47
+}
